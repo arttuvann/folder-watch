@@ -1,7 +1,7 @@
 [Unit]
 Description=Watchdog service for monitoring desired folders
 Type=simple
-ExecStart=/home/arttu/.virtualenvs/watchdog-test/bin/python /home/arttu/home/arttuvann/Projects/watchdog_testing/systemd_example.py
+ExecStart={{ virtualenv_folder }}/bin/python {{ project_folder }}/systemd_example.py
 Restart=on-failure
 [Install]
 WantedBy=multi-user.target
